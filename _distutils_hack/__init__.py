@@ -17,7 +17,6 @@ def warn_distutils_present():
     if 'distutils' not in sys.modules:
         return
     if is_pypy and sys.version_info < (3, 7):
-        # PyPy for 3.6 unconditionally imports distutils, so bypass the warning
         return
     warnings.warn(
         "Distutils was imported before Setuptools, but importing Setuptools "
