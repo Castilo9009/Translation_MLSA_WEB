@@ -9,5 +9,7 @@ args = parser.parse_args()
 
 if args.contents:
     print(contents())
+if args.contracts:
+    print(contracts())
 else:
     print(where())
